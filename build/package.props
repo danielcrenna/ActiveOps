@@ -11,8 +11,8 @@
     <RepositoryUrl>https://github.com/danielcrenna/ActiveOps</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>dynamic ops runtime diagnostics microservices</PackageTags>
-    <Version>1.0.2</Version>
-    <PackageReleaseNotes>Remove vestigial DI commands.</PackageReleaseNotes>
+    <Version>1.0.3</Version>
+    <PackageReleaseNotes>Version bump to fix package logo.</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
