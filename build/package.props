@@ -1,0 +1,18 @@
+<Project>
+
+  <PropertyGroup>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Daniel Crenna &amp; Contributors</Authors>
+    <Description>Runtime diagnostics for production .NET Core applications.</Description>
+    <Copyright>Copyright © Daniel Crenna &amp; Contributors. All rights reserved.</Copyright>
+    <PackageIconUrl>https://raw.githubusercontent.com/danielcrenna/ActiveOps/master/assets/logo.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/danielcrenna/ActiveOps</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/danielcrenna/ActiveOps</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>dynamic ops runtime diagnostics microservices</PackageTags>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>Remove vestigial DI commands.</PackageReleaseNotes>
+  </PropertyGroup>
+
+</Project>
