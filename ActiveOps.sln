@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActiveOps", "src\ActiveOps\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActiveOps.Tests", "test\ActiveOps.Tests\ActiveOps.Tests.csproj", "{EDE92D05-F57A-40E8-B4F0-3851CE1320BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "test\Demo\Demo.csproj", "{AE8235F5-6CAC-4D72-B79B-F0DF3D189AC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,12 @@ Global
 		{EDE92D05-F57A-40E8-B4F0-3851CE1320BF}.Package|Any CPU.Build.0 = Release|Any CPU
 		{EDE92D05-F57A-40E8-B4F0-3851CE1320BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDE92D05-F57A-40E8-B4F0-3851CE1320BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8235F5-6CAC-4D72-B79B-F0DF3D189AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8235F5-6CAC-4D72-B79B-F0DF3D189AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8235F5-6CAC-4D72-B79B-F0DF3D189AC9}.Package|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8235F5-6CAC-4D72-B79B-F0DF3D189AC9}.Package|Any CPU.Build.0 = Debug|Any CPU
+		{AE8235F5-6CAC-4D72-B79B-F0DF3D189AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8235F5-6CAC-4D72-B79B-F0DF3D189AC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

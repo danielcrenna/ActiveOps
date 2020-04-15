@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ActiveOps.Internal
+namespace ActiveOps.Extensions
 {
 	internal static class TypeExtensions
 	{

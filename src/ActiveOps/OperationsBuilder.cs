@@ -2,15 +2,14 @@
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using ActiveRoutes;
-using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ActiveOps
 {
-	public static class Use
+	public class OperationsBuilder : IFeatureBuilder
 	{
-		public static IApplicationBuilder UseOpsApis(this IApplicationBuilder app)
-		{
-			return app.UseActiveRouting();
-		}
+		public OperationsBuilder(IServiceCollection services) => Services = services;
+
+		public IServiceCollection Services { get; }
 	}
 }
