@@ -10,12 +10,15 @@
 
   <ItemGroup>
     <PackageReference Include="ActiveCaching" Version="1.0.5" />
-    <PackageReference Include="ActiveOptions" Version="1.0.9" />
-    <PackageReference Include="ActiveRoutes.Meta" Version="1.0.15" />
+    <PackageReference Include="ActiveOptions" Version="1.0.11" />
     <PackageReference Include="ActiveText" Version="1.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.Text.Json" Version="4.7.1" />
     <PackageReference Include="TypeKitchen" Version="1.2.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ActiveRoutes\src\ActiveRoutes.Meta\ActiveRoutes.Meta.csproj" />
   </ItemGroup>
 
 </Project>

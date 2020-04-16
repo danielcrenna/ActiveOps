@@ -19,6 +19,15 @@ namespace ActiveOps.Controllers
 {
 	public class EnvironmentDebugController : Controller
 	{
+		private readonly IWebHostEnvironment _hosting;
+		private readonly IConfiguration _config;
+
+		public EnvironmentDebugController(IWebHostEnvironment hosting, IConfiguration config)
+		{
+			_hosting = hosting;
+			_config = config;
+		}
+
 		[DynamicHttpGet("")]
 		public IActionResult GetEnvironmentAsync()
 		{
@@ -41,15 +50,12 @@ namespace ActiveOps.Controllers
 					: null;
 			}
 
-			var hosting = HttpContext.RequestServices.GetRequiredService<IWebHostEnvironment>();
-			var config = HttpContext.RequestServices.GetRequiredService<IConfiguration>();
-
 			var process = Process.GetCurrentProcess();
 			var hostName = Dns.GetHostName();
 			var hostEntry = Dns.GetHostEntry(hostName);
 
 			IDictionary<string, object> configuration = new ExpandoObject();
-			foreach (var (k, v) in config.AsEnumerable())
+			foreach (var (k, v) in _config.AsEnumerable())
 			{
 				configuration.Add(k, v);
 			}
@@ -92,10 +98,10 @@ namespace ActiveOps.Controllers
 				Environment =
 					new
 					{
-						hosting.EnvironmentName,
-						hosting.ApplicationName,
-						hosting.ContentRootPath,
-						hosting.WebRootPath,
+						_hosting.EnvironmentName,
+						_hosting.ApplicationName,
+						_hosting.ContentRootPath,
+						_hosting.WebRootPath,
 						Environment.CurrentDirectory,
 						Environment.CurrentManagedThreadId
 					},

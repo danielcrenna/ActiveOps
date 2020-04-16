@@ -23,7 +23,7 @@ namespace ActiveOps
 	{
 		public static IServiceCollection AddOptionsDebuggerApi(this IServiceCollection services, IConfiguration config)
 		{
-			return services.AddOptionsDebuggerApi(config.Bind);
+			return services.AddOptionsDebuggerApi(config.FastBind);
 		}
 
 		public static IServiceCollection AddOptionsDebuggerApi(this IServiceCollection services,
@@ -42,7 +42,7 @@ namespace ActiveOps
 
 		public static IServiceCollection AddServicesDebuggerApi(this IServiceCollection services, IConfiguration config)
 		{
-			return services.AddServicesDebuggerApi(config.Bind);
+			return services.AddServicesDebuggerApi(config.FastBind);
 		}
 
 		public static IServiceCollection AddServicesDebuggerApi(this IServiceCollection services,
@@ -61,7 +61,7 @@ namespace ActiveOps
 		public static IServiceCollection AddHostedServicesDebuggerApi(this IServiceCollection services,
 			IConfiguration config)
 		{
-			return services.AddHostedServicesDebuggerApi(config.Bind);
+			return services.AddHostedServicesDebuggerApi(config.FastBind);
 		}
 
 		public static IServiceCollection AddHostedServicesDebuggerApi(this IServiceCollection services,
@@ -79,7 +79,7 @@ namespace ActiveOps
 
 		public static IServiceCollection AddFeaturesDebuggerApi(this IServiceCollection services, IConfiguration config)
 		{
-			return services.AddFeaturesDebuggerApi(config.Bind);
+			return services.AddFeaturesDebuggerApi(config.FastBind);
 		}
 
 		public static IServiceCollection AddFeaturesDebuggerApi(this IServiceCollection services,
@@ -97,7 +97,7 @@ namespace ActiveOps
 
 		public static IServiceCollection AddHealthChecksApi(this IServiceCollection services, IConfiguration config)
 		{
-			return services.AddHealthChecksApi(config.Bind);
+			return services.AddHealthChecksApi(config.FastBind);
 		}
 
 		public static IServiceCollection AddHealthChecksApi(this IServiceCollection services,
@@ -113,7 +113,7 @@ namespace ActiveOps
 
 		public static IServiceCollection AddEnvironmentApi(this IServiceCollection services, IConfiguration config)
 		{
-			return services.AddEnvironmentApi(config.Bind);
+			return services.AddEnvironmentApi(config.FastBind);
 		}
 
 		public static IServiceCollection AddEnvironmentApi(this IServiceCollection services,
@@ -129,7 +129,7 @@ namespace ActiveOps
 
 		public static IServiceCollection AddRoutesDebuggerApi(this IServiceCollection services, IConfiguration config)
 		{
-			return services.AddRoutesDebuggerApi(config.Bind);
+			return services.AddRoutesDebuggerApi(config.FastBind);
 		}
 
 		public static IServiceCollection AddRoutesDebuggerApi(this IServiceCollection services,
@@ -145,7 +145,7 @@ namespace ActiveOps
 
 		public static IServiceCollection AddCachesDebuggerApi(this IServiceCollection services, IConfiguration config)
 		{
-			return services.AddCachesDebuggerApi(config.Bind);
+			return services.AddCachesDebuggerApi(config.FastBind);
 		}
 
 		public static IServiceCollection AddCachesDebuggerApi(this IServiceCollection services,
@@ -240,7 +240,9 @@ namespace ActiveOps
 			Action<EnvironmentDebugOptions> configureAction = null)
 		{
 			if (configureAction != null)
+			{
 				mvcBuilder.Services.Configure(configureAction);
+			}
 
 			mvcBuilder
 				.AddActiveRoute<OperationsBuilder, EnvironmentDebugController, EnvironmentDebugFeature,

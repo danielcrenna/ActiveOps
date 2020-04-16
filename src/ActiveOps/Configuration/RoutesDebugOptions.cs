@@ -7,7 +7,7 @@ namespace ActiveOps.Configuration
 {
 	public class RoutesDebugOptions : IFeatureToggle, IFeatureNamespace, IFeatureScheme, IFeaturePolicy
 	{
-		public string RootPath { get; } = "/debug/routes";
+		public string RootPath { get; set; } = "/debug/routes";
 		public string Policy { get; set; }
 		public string Scheme { get; set; }
 		public bool Enabled { get; set; }

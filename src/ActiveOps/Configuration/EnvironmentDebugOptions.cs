@@ -7,9 +7,9 @@ namespace ActiveOps.Configuration
 {
 	public class EnvironmentDebugOptions : IFeatureToggle, IFeatureNamespace, IFeatureScheme, IFeaturePolicy
 	{
-		public string RootPath { get; } = "/env";
-		public string Policy { get; set; }
-		public string Scheme { get; set; }
 		public bool Enabled { get; set; }
+		public string RootPath { get; set; } = "/env";
+		public string Scheme { get; set; }
+		public string Policy { get; set; }
 	}
 }

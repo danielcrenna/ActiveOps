@@ -7,7 +7,7 @@ namespace ActiveOps.Configuration
 {
 	public class HealthChecksDebugOptions : IFeatureToggle, IFeatureNamespace, IFeatureScheme, IFeaturePolicy
 	{
-		public string RootPath { get; } = "/debug/health";
+		public string RootPath { get; set; } = "/debug/health";
 		public string Policy { get; set; }
 		public string Scheme { get; set; }
 		public bool Enabled { get; set; }

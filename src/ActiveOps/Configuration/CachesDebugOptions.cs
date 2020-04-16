@@ -7,7 +7,7 @@ namespace ActiveOps.Configuration
 {
 	public class CachesDebugOptions : IFeatureToggle, IFeatureNamespace, IFeatureScheme, IFeaturePolicy
 	{
-		public string RootPath { get; } = "/debug/caches";
+		public string RootPath { get; set; } = "/debug/caches";
 		public string Policy { get; set; }
 		public string Scheme { get; set; }
 		public bool Enabled { get; set; }

@@ -7,7 +7,7 @@ namespace ActiveOps.Configuration
 {
 	public class HostedServicesDebugOptions : IFeatureToggle, IFeatureNamespace, IFeatureScheme, IFeaturePolicy
 	{
-		public string RootPath { get; } = "/debug/hosted";
+		public string RootPath { get; set; } = "/debug/hosted";
 		public string Policy { get; set; }
 		public string Scheme { get; set; }
 		public bool Enabled { get; set; }
